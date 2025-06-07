@@ -79,6 +79,15 @@ nav a {
   margin: 0 auto 10px auto;
 }
 
+.circle img{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
 .contact {
   display: flex;
   flex-wrap: wrap;
@@ -123,6 +132,21 @@ footer {
   margin-top: 50px;
   font-size: 14px;
   color: #555;
+}
+
+.vision-mission{
+    text-align: justify;
+    padding: 10px;
+}
+
+.vision-mission h2{
+    text-align: center;
+}
+
+.vision-mission ul{
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: left;
 }
 
 @media (max-width: 768px) {

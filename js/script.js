@@ -25,15 +25,21 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const name = document.getElementById("name").value.trim();
-  const dob = document.getElementById("dob").value;
-  const gender = document.getElementById("gender").value;
-  const message = document.getElementById("message-content").value.trim();
+  const userMessage = document.getElementById("message-content").value.trim();
 
-  if (!name || !dob || !gender || !message) {
+  if (!name || !userMessage) {
     alert("Please fill in all fields.");
     return;
   }
 
-  const summary = `Name: ${name}\nDOB: ${dob}\nGender: ${gender}\nMessage: ${message}`;
+  // Tampilkan ringkasan di halaman (jika tetap ingin ditampilkan)
+  const summary = `Name: ${name}\nMessage: ${userMessage}`;
   document.getElementById("user-message").textContent = summary;
+
+  // Kirim ke WhatsApp
+  const waNumber = "6281212707907"; // ganti dengan nomor WA kamu
+  const waMessage = `Hello, here's a message from the website:\n\n${summary}`;
+  const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`;
+
+  window.open(waUrl, "_blank");
 });

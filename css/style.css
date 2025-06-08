@@ -11,17 +11,31 @@ body {
   padding-left: 50px;
   padding-right: 10px;
   line-height: 1.6;
+  background-color: #ecf0f1 ;
+  
+}
+
+body p,ul{
+    color: #34495e;
+}
+
+body h1,h2,h3{
+    color: #3498db;
 }
 
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: white;
+  background-color: #3498db ;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   border-bottom: 1px solid #ccc;
 }
 
@@ -38,7 +52,7 @@ header {
 nav a {
   margin-left: 15px;
   text-decoration: none;
-  color: #333;
+  color: #ecf0f1;
 }
 
 .hero {
@@ -50,6 +64,7 @@ nav a {
   background-color: #eee;
   height: 200px;
   margin-top: 20px;
+  
 }
 
 .image-placeholder img {
@@ -57,6 +72,7 @@ nav a {
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 5px;
 }
 
 .facilities {
@@ -75,7 +91,7 @@ nav a {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid #3498db;
   margin: 0 auto 10px auto;
 }
 
@@ -133,6 +149,14 @@ footer {
   font-size: 14px;
   color: #555;
 }
+.about {
+    text-align: justify;
+    padding: 10px;
+}
+
+.about h2{
+    text-align: center;
+}
 
 .vision-mission{
     text-align: justify;
@@ -158,4 +182,18 @@ footer {
   form, .submitted {
     width: 100%;
   }
+  .image-placeholder {
+        width: 100%;       /* ukuran crop */
+        height: auto;
+        overflow: hidden;
+        position: relative;
+    }
+  .image-placeholder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        object-position: center;
+        border-radius: 5px;
+    }
 }
